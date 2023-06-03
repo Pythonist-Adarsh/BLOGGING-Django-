@@ -1,0 +1,45 @@
+{% extends 'inherit.html' %}
+
+{% block body %}
+<style>
+    .container_blog
+    {
+    height:700px;
+   // line-height:auto;
+    width:100%;
+    background:#F2EFF5;
+    border:1px solid white;
+    }
+    .row_blog
+    {
+    height:700px;
+    //line-height:auto;
+    width:100%;
+    border:1px solid white;
+    }
+</style>
+<div class="container_blog">
+    <div class="row_blog">
+<div class="col-md-12" id="list-example" >
+        <div class="card-group" style="float:left;height:auto;width:100%;margin:10px;//border:1px solid blue;background:;"><br>
+     {% for b in blg %}
+            <div class="col-md-4">
+        <div class="card"  style="margin:20px;height:550px;//border:1px solid brown;background:#E8F3EF;opacity:.86;box-shadow:7px 7px  5px black;">
+    <img src="{{b.image}}" class="card-img-top" alt="..." height="200px" width="260px" style="border-radius:130px"><br/>
+            <span style="font-size:25px;text-align:left; font-family: 'Brush Script MT', cursive;letter-spacing:3px;line-height:10px"><i>{{b.category}}</i></span><hr style="width:80%;color:red;">
+    <div class="card-body" style="//border:1px solid green;height:200px" >
+        <h5 class="card-title" style="font-family: 'Lucida Console', 'Courier New', monospace;;line-height:30px;"><q><i>{{b.title}}&nbsp</i></q></h5>
+        <p class="card-text" style="overflow:hidden;height:100px;font-family:font-family:'Times New Roman', Times, serif;color:#2A5961;"><q>{{b.description}}</q></p><a href="blogs.html">Continue Reading</a><br/>
+        <br/><name style="color:#384D46;font-size:16px;"><b>By Adarsh Tiwari</b></name>
+        <date style="float:right;color:#2A5961">{{b.blogdate}}</date><br/><br>
+    </div>
+            <br/>
+  </div>
+            </div>
+  {% endfor %}
+</div>
+ </div>
+
+    </div>
+</div>
+{% endblock body %}

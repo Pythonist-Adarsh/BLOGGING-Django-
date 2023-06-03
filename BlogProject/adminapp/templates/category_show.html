@@ -1,0 +1,38 @@
+{% extends "parent.html" %}
+{% block body  %}
+<style>
+ thead
+ {
+background:#B4E3E6;
+ }
+ tr:nth-child(even){
+ background-color:#D7EADE;
+ }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h2>Category selected</h2>
+<br/>
+<center>
+<table   style="height:auto;width:70%;//border:1px solid #76A3E2">
+ <thead>
+<tr>
+ <th style="text-align:center;color:#697987;font-size:20px">Category</th>
+ <th style="text-align:center;color:#697987">Delete</th>
+ </tr>
+ </thead>
+  {% for c in cat %}
+ <tr>
+
+  <td><center style="color:#3AA0DD;font-size:20px">{{c.category}}</center></td><br/>
+ <td><a href="{% url 'adminapp:delete_category' id=c.id %}"><center><img src="https://img.icons8.com/nolan/64/delete-forever.png" height="30px" width="30px"/></center></a></td>
+</tr>
+
+  {% endfor %}
+
+ <tbody>
+ </tbody>
+</table>
+ </center>
+
+
+{% endblock body %}

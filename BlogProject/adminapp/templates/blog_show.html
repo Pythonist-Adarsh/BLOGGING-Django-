@@ -1,0 +1,46 @@
+{% extends 'parent.html' %}
+{% block body %}
+<style>
+ thead
+ {
+background:#B4E3E6;
+ }
+ tr:nth-child(even){
+ background-color:#D7EADE;
+ }
+ tbody tr td{
+ color:#0D383E;
+ }
+ .table table-striped table-hover{
+ height:500px;
+ }
+</style>
+<h3 style="text-align:center;margin-top:20px;color:#434E4F">Blog Area</h3>
+<br>
+<!-- This example requires Tailwind CSS v2.0+ -->
+<table class="table table-striped table-hover"  width="100%"  style="padding:15px;margin:10px;">
+    <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Category</th>
+    <th>Photo</th>
+    <th>description</th>
+    <th>Delete</th>
+    </thead>
+    <tbody >
+    {% for bl in blog %}
+    <tr>
+        <td>{{bl.id}}</td>
+        <td>{{bl.title}}</td>
+        <td>{{bl.category}}</td>
+        <td><img src="{{bl.image}}" height="100px" width="100px"></td>
+        <td>{{bl.description}}</td>
+        <td><a href="{% url  'adminapp:deleteblog' id=bl.id %}"><img src="https://img.icons8.com/plumpy/24/000000/delete-trash.png" height="30px" width="30px"/></a></td>
+
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock body %}

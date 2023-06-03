@@ -1,0 +1,42 @@
+{% extends 'parent.html' %}
+{% block body %}
+<style>
+
+input[type=text]:hover
+{
+background:#63C6D2;
+opacity:0.65;
+box-shadow:3px 2px #8ACDD5;
+}
+input[type=email]:hover
+{
+background:#63C6D2;
+opacity:0.65;
+box-shadow:3px 2px #8ACDD5;
+}
+textarea:hover
+{
+background:#63C6D2;
+opacity:0.65;
+box-shadow:3px 2px #8ACDD5;
+}
+
+
+</style>
+<h4 style="text-align:center;font-size:30px;font-family:Papyrus;color:#6E5991;">Analysis</h4><br/><br/>
+<form action="{% url 'adminapp:create_enquiry' %}" method="post">
+  {% csrf_token %}
+  <div class="row" style="margin-top:20px;">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Name" name="uname">
+    </div>
+    <div class="col">
+      <input type="email" class="form-control" placeholder="Email" name="email">
+    </div>
+  </div><br>
+    <div class="form-group">
+    <textarea  class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message" name="message"></textarea>
+  </div>
+  <button type="submit" class="btn btn-outline-info" style="width:50%;margin-left:20%">Enquiry</button>
+</form>
+{% endblock body %}

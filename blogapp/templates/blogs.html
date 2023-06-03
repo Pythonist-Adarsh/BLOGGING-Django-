@@ -1,0 +1,35 @@
+{% extends 'inherit.html' %}
+{% block body %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<select class="form-select" aria-label="Default select example">
+  <option style="font-size:20ssspx" selected>Select category</option>
+
+{% for c in cate %}
+<option value="1">{{c.category}}</option>
+{% endfor %}
+</select><br/><br/>
+<script>
+    function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+<div class="col-md-12" style="width:70%;margin:0px auto;">
+  {% for b in bl %}
+    <div class="card mb-4"  >
+        <img src="{{b.image}}" class="card-img" alt="..." height="390px" >
+        <div class="card-body" style="background:#FCF7FF">
+    <h5 class="card-title" style="color:grey">{{b.title}}</h5>
+    <p class="card-text" style="color:grey ;font-size:15px">{{b.description}}</p>
+    <p class="card-text" style="color:black;font-size:16px" ><date class="text-muted" >{{b.blogdate}}</date></p>
+
+<form method="post" action="#">
+    {% csrf_token  %}
+    <div class="form-floating" style="float:left">
+            <a  style="color:grey" ><i onclick="myFunction(this)"  id='mp1'  class="fa fa-thumbs-up" style="font-size:30px;float:left"></i></a>
+    </div>
+    </form>
+</div>
+</div>
+    {% endfor %}
+</div>
+{% endblock body %}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Login Page!</title>
+  <style>
+  body
+  {
+  padding:0px ;
+  margin:0px;
+  }
+.container-full
+{
+height:auto;
+width:100%;
+border:1px solid;
+}
+.container_1
+{
+height:auto;
+width:auto;
+border:1px solid #424047;
+background:#424047 ;
+}
+.row
+{
+height:auto;
+min-height:580px;
+width:1000px;
+//background:blue;
+//border:1px solid blue;
+border-radius:10px;
+ background:url("static/images/p1.jpg");
+    background-size:cover;
+background-attachment:fixed;
+ //background-position:absolute;
+ background-repeat:no-repeat;
+
+margin:0px auto;
+margin-top:30px;
+}
+.col-sm-4
+{
+height:400px;
+width:500px;
+//border:1px solid yellow;
+background:white;
+border-radius:10px;
+float:left;
+//margin:20px;
+margin-top:80px;
+margin-left:30px;
+opacity:0.85;
+}
+.col-sm-6
+{
+height:400px;
+wodth:500px;
+border:1px solid ;
+float:left;
+border-radius:20px;
+margin-top:80px;
+margin-left:30px;
+background:#17161C;
+opacity:0.68;
+}
+button[type=submit]
+{
+width:200px;
+margin-left:50px;
+}
+.input-group-addon
+{
+color:#32293F;
+}
+#mybbtn
+{
+border:1px solid blue;
+margin:20px;
+color:grey;
+}
+#mybbtn:hover
+{
+color:white;
+}
+
+  </style>
+  </head>
+  <body>
+    <div class="container-full">
+    <div class="container_1">
+
+<div class="row">
+    <div class="col-sm-4">
+        <h5 style="text-align:center;font-size:30px;letter-spacing:3px;color:#4A4453"><i>Login</i>
+    </h5>
+        <hr/>
+        <form class="myform" action="{% url 'validateuser' %}" method="post">
+            {% csrf_token %}
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user-secret" aria-hidden="true"></i></span>
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email or Username">
+  </div><br>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+ <br/>
+<button type="submit" class="btn btn-outline-secondary" id="mybtn"><span class="input-group-addon"><i class="fa fa-sign-out" aria-hidden="true">Login</i></span>
+</button><br/>
+            <h6 style="text-align:center;"><a href="password.html" style="color:#4A4453;text-decoration:none;">Forgot password?</a></h6>
+        </form>
+    </div>
+    <div class="col-sm-6">
+        <h5 style="text-align:center;font-size:30px;letter-spacing:3px;color:#F2ECFF;margin-top:50px;font-size:35px"><i>BlogIt</i>
+    </h5><br/>
+        <span style="color:#F9EAFF;font-size:16px;">Blogging is a conversation, not a code</span>
+<p style="color:#F9EAFF;font-size:16px;">You can work quite hard, in particular online, and do quite well independently, but if you really want to grow you need points of leverage and most of them come from knowing people</p>
+<button type="button" class="btn btn-outline-dark" id="mybbtn">Read more</button></div>
+  </div>
+    </div>
+ </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

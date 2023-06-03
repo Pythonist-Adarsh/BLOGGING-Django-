@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <title>Blog page..</title>
+       <style>
+  body
+  {
+  padding:0px;
+  margin:0px;
+  }
+  .card-title{
+  color:#7D9ED5;
+   quotes: "'" "'";
+  }
+  .row_contact
+  {
+  height:auto;
+  width:100%;
+  background:#f8f8f8;
+  }
+  .row_about
+  {
+  height:400px;
+  width:100%;
+  border:1px solid;
+  }
+  .container_footer
+  {
+  height:530px;
+  width:100%;
+  //border:1px solid green;
+  background:black;
+  }
+  .row_footer
+  {
+  height:530px;
+  width:100%;
+  //border:1px solid blue;
+  }
+  </style>
+  </head>
+<body>
+  <br>
+    <nav class="navbar navbar-expand-lg navbar-light" style="margin-top:-20px;background-color:#1B1C47;height:auto;min-height:70px;position:static;opacity:.70;">
+  <div class="container-fluid" style="opacity:.76">
+    <a class="navbar-brand" href="#" style="color:#356BD5;font-size:42px;line-height:30px;font-family:Monotype Corsiva">Blog.IT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html" style="color:white;margin-left:150px;font-family:Lucida Bright;letter-spacing:2px;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blogs.html" style="color:white;margin-left:150px;font-family:Lucida Bright;letter-spacing:2px">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact_us.html" style="color:white;margin-left:150px;font-family:Lucida Bright;letter-spacing:2px">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html" style="color:white;margin-left:150px;font-family:Lucida Bright;letter-spacing:2px">About us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/images/lob5.jpg" class="d-block w-100" alt="..." height="600px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5><span style="color:white;font-size:30px;margin-left:50px;font-family:Lucida Calligraphy;letter-spacing:5px ">BLOGGING....</span></h5>
+     <span style="color:white;margin-left:40px;font-style:italic;font-size:30px">Conversation is king. Content is just something to talk about</span>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/blo7.jpg" class="d-block w-100" alt="..." height="600px">
+       <div class="carousel-caption d-none d-md-block">
+          <h5><span style="color:white;font-size:30px;margin-left:50px;font-family:Lucida Calligraphy;letter-spacing:5px ">First think, then Create</span></h5>
+     <span style="color:white;margin-left:40px;font-style:italic;font-size:30px">The currency of blogging is authenticity and trust</span>
+       </div>
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/lob3.jpg" class="d-block w-100" alt="..." height="600px">
+      <div class="carousel-caption d-none d-md-block">
+      <h5><span style="color:white;font-size:30px;margin-left:50px;font-family:Lucida Calligraphy;letter-spacing:5px ">Move fast, break things</span></h5>
+     <span style="color:white;margin-left:40px;font-style:italic;font-size:30px">What you do after you create your content is what truly counts.</span>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+  <br/>
+  <h1 style="text-align:center;font-style:italic;color:#313635" data-bs-target="#list-example"><mark style="color:white;background:grey">Blogs</mark></h1><br/>
+    <hr style="width:50%;margin:0px auto;color:blue;height:2px"><br><br>
+{% block body %}
+
+{% endblock body %}
+  <br/>
+<br/>
+  <div class="container_footer">
+      <div class="row_footer"><br/><br/>
+    <div class="col-md-2" style="height:30px;width:auto;//border:1px solid white;float:left">
+    <p ><a href="#" style="color:white;font-size:30px;margin:10px;text-decoration:none;font-family:Monotype Corsiva"><img height="25px" width="30px" src="https://img.icons8.com/ios-filled/50/ffffff/google-blog-search.png"/>&nbsp&nbspBlog.It</a></p>
+</div>
+          <div class="col-md-2" style="height:30px;width:auto;//border:1px solid blue;float:right">
+    <p ><a href="#" style="color:white;font-size:25px;margin:10px;text-decoration:none;font-family:Monotype Corsiva">Return To tap&nbsp&nbsp<img src="https://img.icons8.com/metro/26/ffffff/up--v1.png" height="25px" width="30px"/></a></p>
+</div><br/>
+<br/>
+          <hr style="color:white;background:white;height:1px;text-align:center;margin:0px auto;width:97%"/><br/></br/>
+          <div class="col-md-8" style="height:70px;width:100%;//border:1px solid white">
+              <ul>
+                  <li style="float:left;padding:8px;list-style-type:none;color:#ECFCFF">About<p style="color:white;float:right;margin-left:50px;height:10px ">|</p></li>
+              </ul>
+              <ul>
+                  <li style="float:left;list-style-type:none;"><p style="letter-spacing:0px;margin:5px 5px 5px;color:#ECFCFF;font-size:16px;text-align:center">Privacy Notice</p></li>
+                  <li style="float:left;list-style-type:none;"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px">&nbsp&nbspOur company</p></li>
+                  <li style="float:left;list-style-type:none"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px">&nbsp&nbspTerms of Use</p></li>
+                  <li style="float:left;list-style-type:none"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px">&nbsp&nbspPrivacy rights</p></li>
+              </ul>
+          </div><br/>
+          <div class="col-md-8" style="height:70px;width:100%;//border:1px solid white">
+              <ul>
+                  <li style="float:left;padding:8px;list-style-type:none;color:#ECFCFF">Contact<p style="color:white;float:right;margin-left:50px;height:10px ">|</p></li>
+              </ul>
+              <ul>
+                  <li style="float:left;list-style-type:none;"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px">Customer service </p></li>
+                  <li style="float:left;list-style-type:none;"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px">&nbsp&nbspContact</p></li>
+              </ul>
+          </div><br/>
+          <div class="col-md-8" style="height:80px;width:100%;//border:1px solid white">
+              <ul>
+                  <li style="float:left;padding:8px;list-style-type:none;color:#ECFCFF">Connect<p style="color:white;float:right;margin-left:50px;height:10px ">|</p></li>
+              </ul>
+              <ul>
+                  <li style="float:left;list-style-type:none;"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px"><a href="#" style="text-decoration:none;color:white">&nbsp&nbsp<img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" height="18px"/>&nbspEmail</a></p></li>
+                  <li style="float:left;list-style-type:none;"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px"><a href="#" style="text-decoration:none;color:white">&nbsp&nbsp<img src="https://img.icons8.com/metro/26/ffffff/facebook-new--v2.png" height="18px"/>&nbspFacebook</a></p></li>
+                  <li style="float:left;list-style-type:none"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px"><a href="#" style="text-decoration:none;color:white">&nbsp&nbsp<img src="https://img.icons8.com/metro/26/ffffff/twitter.png" height="18px"/>&nbspTwitter</a></p></li>
+                  <li style="float:left;list-style-type:none"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px"><a href="#" style="text-decoration:none;color:white">&nbsp&nbsp<img src="https://img.icons8.com/metro/26/ffffff/pinterest.png" height="18px"/>&nbspPinterest </a></p></li>
+                  <li style="float:left;list-style-type:none"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px"><a href="#" style="text-decoration:none;color:white">&nbsp&nbsp<img src="https://img.icons8.com/material-rounded/24/ffffff/google-logo.png" height="18px"/>&nbspGoogle </a></p></li>
+                  <li style="float:left;list-style-type:none"><p style="letter-spacing:0px;margin:5px 5px 3px;color:#ECFCFF;font-size:16px"><a href="#" style="text-decoration:none;color:white">&nbsp&nbsp<img src="https://img.icons8.com/material-outlined/24/ffffff/instagram-new.png" height="18px"/>&nbspInstagram </a></p></li>
+              </ul>
+          </div>
+
+          <hr style="color:white;background:white;height:1px;text-align:center;margin:0px auto;width:97%"/><br/>
+<p style="color:white;text-align:center;letter-spacing:3px">&copy;Copyright 2020 Blog.It  LLC</p>
+
+      </div></div>
+   </body>
+</html>
